@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolie Smiles | Premium Dentures & Implants by Dr. Caroline Truong</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #7D5850;
+            --accent: #C17A5E;
+            --secondary: #F5EBE0;
+            --text: #2C2622;
+        }
+
+        html, body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.5rem; }
+
+        p { margin-bottom: 1.2rem; }
+
+        /* Section Base */
+        section {
+            display: flex;
+            align-items: stretch;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+        section:nth-child(7) { animation-delay: 0.7s; }
+        section:nth-child(8) { animation-delay: 0.8s; }
+        section:nth-child(9) { animation-delay: 0.9s; }
+        section:nth-child(10) { animation-delay: 1s; }
+
+        .section-content, .section-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 100px 80px;
+        }
+
+        .section-content {
+            background-color: #fff;
+        }
+
+        .section-image {
+            background-color: var(--secondary);
+            align-items: center;
+        }
+
+        .section-image img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* 60/40 Left Text */
+        .split-60-40 {
+            width: 100%;
+        }
+
+        .split-60-40 .section-content {
+            flex: 0 0 60%;
+        }
+
+        .split-60-40 .section-image {
+            flex: 0 0 40%;
+        }
+
+        /* 40/60 Left Image */
+        .split-40-60 {
+            width: 100%;
+            flex-direction: row-reverse;
+        }
+
+        .split-40-60 .section-image {
+            flex: 0 0 40%;
+        }
+
+        .split-40-60 .section-content {
+            flex: 0 0 60%;
+        }
+
+        /* Hero Section Special */
+        #hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, rgba(245, 235, 224, 0.8) 100%);
+        }
+
+        #hero .section-content h1 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        #hero .section-content .subheadline {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        #hero .section-content .trust {
+            font-size: 1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: fit-content;
+            border-radius: 0;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary);
+        }
+
+        /* Content Sections */
+        #intro h2, #credentials h2, #services h2, #pain h2, #results h2, #cost h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        #intro .section-content, #services .section-content, #results .section-content {
+            background-color: #fff;
+        }
+
+        #credentials .section-content, #pain .section-content, #cost .section-content {
+            background-color: #fff;
+        }
+
+        /* Lab Section - Full Width */
+        #lab {
+            display: block;
+            min-height: 60vh;
+            background-color: var(--primary);
+            color: white;
+            padding: 120px 80px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #lab h2 {
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 3rem;
+        }
+
+        #lab p {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0 auto 1rem;
+            line-height: 1.8;
+        }
+
+        #lab ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: left;
+        }
+
+        #lab li {
+            padding: 0.8rem 0;
+            font-size: 1.1rem;
+        }
+
+        #lab li:before {
+            content: "✓ ";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 0.8rem;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            display: block;
+            min-height: auto;
+            padding: 120px 80px;
+            background-color: #fff;
+        }
+
+        #testimonials h2 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-left: 5px solid var(--accent);
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .testimonial-card p:first-child {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-card .attribution {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Final CTA */
+        #final-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px;
+        }
+
+        #final-cta h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        #final-cta .subheadline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        #final-cta .cta-button {
+            background-color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            margin-top: 3rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                min-height: auto;
+                flex-direction: column;
+            }
+
+            .split-60-40,
+            .split-40-60 {
+                flex-direction: column;
+            }
+
+            .split-60-40 .section-content,
+            .split-60-40 .section-image,
+            .split-40-60 .section-content,
+            .split-40-60 .section-image {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+
+            .section-content, .section-image {
+                padding: 60px 40px;
+            }
+
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.2rem; }
+
+            #lab, #final-cta {
+                padding: 60px 40px;
+            }
+
+            #lab h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            #hero .section-content .subheadline {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="split-60-40">
+        <div class="section-content">
+            <h1>Premium Dentures & Implants by a Board-Eligible Prosthodontist</h1>
+            <p class="subheadline">Dr. Caroline Truong brings 11 years of specialized training and in-house precision to your smile transformation. Same-day teeth, real results, no compromise.</p>
+            <p class="trust">4.9★ rating, 200+ patient reviews</p>
+            <button class="cta-button">Schedule Your Consultation</button>
+        </div>
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Dr. Truong professional portrait">
+        </div>
+    </section>
+
+    <!-- SECTION 2: DR TRUONG INTRO -->
+    <section id="intro" class="split-60-40">
+        <div class="section-content">
+            <h2>11 Years of Specialized Training. A Professor. A Volunteer.</h2>
+            <p>Dr. Caroline Truong is board-eligible in prosthodontics—the dental specialty dedicated to complex smile restoration. Her training spans 11 years of graduate education, clinical research, and mentoring other dentists. She's taught at university, volunteered for underserved communities, and built Jolie Smiles specifically to deliver specialist-level results to Tampa Bay.</p>
+            <p>What this means for you: You're not seeing a general dentist who also does implants. You're seeing someone who has dedicated her career to making dentures and implants look, feel, and function like natural teeth.</p>
+        </div>
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Dr. Truong in clinical setting">
+        </div>
+    </section>
+
+    <!-- SECTION 3: CREDENTIALS -->
+    <section id="credentials" class="split-40-60">
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Dr. Truong credentials and certificates">
+        </div>
+        <div class="section-content">
+            <h2>Why 'Board-Eligible' Matters</h2>
+            <p>Board-eligible status means Dr. Truong has completed rigorous graduate training, clinical case requirements, and passed comprehensive exams in prosthodontics. She's among the top 5% of dentists specializing in complex smile work.</p>
+            <p><strong>Credentials:</strong></p>
+            <ul style="list-style: none; margin-left: 0;">
+                <li>✓ 11 years specialized education (beyond dental school)</li>
+                <li>✓ University faculty member (UF Prosthodontics, Lake Erie College)</li>
+                <li>✓ Published researcher (Journal of Prosthetic Dentistry)</li>
+                <li>✓ Volunteer dentist for underserved patients</li>
+                <li>✓ Fluent in 5 languages</li>
+                <li>✓ 4.9★ rating from 200+ patients</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION 4: SERVICES -->
+    <section id="services" class="split-60-40">
+        <div class="section-content">
+            <h2>Premium Dentures, Implants & In-House Innovation</h2>
+            <p><strong>Complete Dentures:</strong> Custom-crafted, precision-fit dentures that look natural and feel confident.</p>
+            <p><strong>Dental Implants:</strong> Permanent replacement for missing teeth. Lasts 25+ years. Preserves jaw structure.</p>
+            <p><strong>Same-Day Teeth:</strong> Walk in with a problem smile. Walk out with confidence. Our in-house lab makes same-day transformation possible.</p>
+        </div>
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Modern dental treatment room">
+        </div>
+    </section>
+
+    <!-- SECTION 5: FEAR - PAIN -->
+    <section id="pain" class="split-40-60">
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Comfortable dental treatment environment">
+        </div>
+        <div class="section-content">
+            <h2>Dentures Don't Hurt. Implant Placement Is Numbed.</h2>
+            <p><strong>Denture Fitting:</strong> Dentures rest on your gums—they're not drilled. Fitting may feel odd, but not painful. We adjust fit over visits until comfort is perfect.</p>
+            <p><strong>Implant Placement:</strong> The implant is surgically placed into bone, but you're fully numbed. You'll feel pressure and vibration, not pain.</p>
+            <p><strong>Implant Restoration:</strong> Once the implant is integrated, placing the crown is painless. No drilling, no injection.</p>
+            <p>Dr. Truong uses gentle technique, advanced numbing options, and transparent communication to keep you comfortable throughout.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FEAR - RESULTS -->
+    <section id="results" class="split-60-40">
+        <div class="section-content">
+            <h2>Your New Smile Will Look Authentically Yours</h2>
+            <p>Dr. Truong is trained to create smiles that blend seamlessly with your face, personality, and age. She uses:</p>
+            <ul style="margin: 1.5rem 0; list-style-position: inside;">
+                <li>Custom shade matching (your teeth, in better condition)</li>
+                <li>Personalized shape & size (proportional to your face)</li>
+                <li>In-house lab precision (adjustments same-day)</li>
+                <li>High-quality materials</li>
+            </ul>
+            <p><strong>Patient quotes:</strong></p>
+            <p style="font-style: italic; margin-left: 1rem; border-left: 3px solid var(--accent); padding-left: 1rem;">'People say I look younger, happier—but can't tell I have implants.'</p>
+            <p style="font-style: italic; margin-left: 1rem; border-left: 3px solid var(--accent); padding-left: 1rem;">'My dentures feel like they're mine.'</p>
+            <p style="font-style: italic; margin-left: 1rem; border-left: 3px solid var(--accent); padding-left: 1rem;">'For the first time in years, I smile in photos.'</p>
+            <p>Your new smile isn't 'fake.' It's authentically, confidently you.</p>
+        </div>
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Smiling patient with natural-looking smile restoration">
+        </div>
+    </section>
+
+    <!-- SECTION 7: FEAR - COST -->
+    <section id="cost" class="split-40-60">
+        <div class="section-image">
+            <img src="https://via.placeholder.com/400x500" alt="Financial consultation and payment options">
+        </div>
+        <div class="section-content">
+            <h2>Premium Care, Flexible Options. No Surprise Bills.</h2>
+            <p><strong>Dentures:</strong> $2,500–$4,500 (complete upper and lower)</p>
+            <p><strong>Dental Implants:</strong> $1,500 per implant + abutment/crown ($1,500–$3,000)</p>
+            <p><strong>Same-Day Teeth:</strong> $3,500–$7,000</p>
+            <p><strong>Financing Available:</strong></p>
+            <ul style="list-style: none; margin-left: 0;">
+                <li>✓ Payment plans (12–36 months, interest-free)</li>
+                <li>✓ CareCredit & medical financing</li>
+                <li>✓ Dental insurance benefits applied directly</li>
+                <li>✓ Consultation is FREE</li>
+            </ul>
+            <p>Money-back guarantee: If you're not satisfied within 6 months, we work with you to make it right.</p>
+            <p>Your investment is in your health, confidence, and 10+ years of smile success.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 8: LAB DIFFERENTIATOR -->
+    <section id="lab">
+        <h2>Same-Day Teeth, Real Lab. This Changes Everything.</h2>
+        <p>Most dental practices outsource dentures to distant labs (2–3 weeks wait).</p>
+        <p>Jolie Smiles is different: Our in-house lab is 20 feet from the treatment room.</p>
+        <p><strong>What this means:</strong></p>
+        <ul>
+            <li>Same-day teeth for qualified cases</li>
+            <li>Real-time adjustments (Dr. Truong refines in front of you)</li>
+            <li>No communication delays or lost work orders</li>
+            <li>Quality control by a prosthodontist, not a factory</li>
+            <li>Faster timeline for complex cases (weeks vs. months)</li>
+        </ul>
+        <p style="margin-top: 2rem;">This is why Dr. Truong built Jolie Smiles: to keep complete control over quality and speed. You benefit from both.</p>
+    </section>
+
+    <!-- SECTION 9: TESTIMONIALS -->
+    <section id="testimonials">
+        <h2>What Our Patients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"I'm not in pain anymore. I feel like myself again."</p>
+                <p class="attribution">— Full-mouth restoration</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"This has changed my life; I tell everyone about my new smile."</p>
+                <p class="attribution">— Denture patient</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"I feel beautiful. I can smile in photos now without hiding."</p>
+                <p class="attribution">— Smile restoration</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"The whole process was basically pain free."</p>
+                <p class="attribution">— Implant patient</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"If I gave it a 10/10 I'd be lying, I need to go higher."</p>
+                <p class="attribution">— Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FINAL CTA -->
+    <section id="final-cta">
+        <div>
+            <h2>Ready to Smile Again?</h2>
+            <p class="subheadline">Schedule a free 30-minute consultation with Dr. Truong. Let's discuss your options.</p>
+            <button class="cta-button">Schedule Now</button>
+            <div class="contact-info">
+                <p>7749 Van Dyke Rd, Odessa, FL 33556</p>
+                <p>(813) 687-4916</p>
+                <p>Monday–Thursday 8am–4pm EST</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
